@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: service-users
+
+#Application Configuration
+server:
+  port: ${PORT:0}
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+#logging:
+#  level:
+#    org.hibernate.sql: debug
+
+logging.level.org.hibernate.SQL: DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder: TRACE

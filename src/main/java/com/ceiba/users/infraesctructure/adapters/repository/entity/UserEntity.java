@@ -28,6 +28,8 @@ public class UserEntity implements Serializable {
     @JoinTable(uniqueConstraints =  {@UniqueConstraint(columnNames = {"user_entity_id", "roles_id"})}) //para que un role no se repita
     private List<RoleEntity> roles;
 
+    private Integer attempts;
+
     public Long getId() {
         return id;
     }
@@ -90,5 +92,13 @@ public class UserEntity implements Serializable {
 
     public void setRoles(List<RoleEntity> roles) {
         this.roles = roles;
+    }
+
+    public Integer getAttempts() {
+        return attempts;
+    }
+
+    public void setAttempts(Integer attempts) {
+        this.attempts = attempts;
     }
 }
